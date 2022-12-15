@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+      "username",
+      "firstName",
+      "lastName",
+      "email",
+      "image",
+      "bio",
+      "isAdmin"
+  ],
+  "properties": {
+      "username": {
+          "type": "string",
+          "default": "",
+          "title": "The username Schema",
+          "examples": [
+              "testadmin"
+          ]
+      },
+      "firstName": {
+          "type": "string",
+          "default": "",
+          "title": "The firstName Schema",
+          "examples": [
+              "Test"
+          ]
+      },
+      "lastName": {
+          "type": "string",
+          "default": "",
+          "title": "The lastName Schema",
+          "examples": [
+              "Admin!"
+          ]
+      },
+      "email": {
+          "type": "string",
+          "default": "",
+          "title": "The email Schema",
+          "examples": [
+              "joel@joelburton.com"
+          ]
+      },
+      "image": {
+          "type": "string",
+          "default": "",
+          "title": "The image Schema",
+          "examples": [
+              "https://cdn.britannica.com/79/65379-050-5CF52BAC/Shortfin-mako-shark-seas.jpg"
+          ]
+      },
+      "bio": {
+          "type": "string",
+          "default": "",
+          "title": "The bio Schema",
+          "examples": [
+              "Baby Shark, doo-doo, doo-dooBaby Shark, doo-doo, doo-dooBaby Shark, doo-doo, doo-dooBaby Shark"
+          ]
+      },
+      "isAdmin": {
+          "type": "boolean",
+          "default": false,
+          "title": "The isAdmin Schema",
+          "examples": [
+              true
+          ]
+      }
+  },
+  "examples": [{
+      "username": "testadmin",
+      "firstName": "Test",
+      "lastName": "Admin!",
+      "email": "joel@joelburton.com",
+      "image": "https://cdn.britannica.com/79/65379-050-5CF52BAC/Shortfin-mako-shark-seas.jpg",
+      "bio": "Baby Shark, doo-doo, doo-dooBaby Shark, doo-doo, doo-dooBaby Shark, doo-doo, doo-dooBaby Shark",
+      "isAdmin": true
+  }]
+}
