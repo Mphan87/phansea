@@ -104,10 +104,7 @@ class User {
     return user;
   }
 
-  /** Find all users.
-   *
-   * Returns [{ username, first_name, last_name, email, is_admin }, ...]
-   **/
+
 
   static async findAll() {
     const result = await db.query(
@@ -125,13 +122,6 @@ class User {
     return result.rows;
   }
 
-  /** Given a username, return data about user.
-   *
-   * Returns { username, first_name, last_name, is_admin, jobs }
-   *   where jobs is { id, title, company_handle, company_name, state }
-   *
-   * Throws NotFoundError if user not found.
-   **/
 
   static async get(username) {
     const userRes = await db.query(
