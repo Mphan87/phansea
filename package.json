@@ -32,7 +32,6 @@
   },
   "devDependencies": {
     "supertest": "^6.3.3"
-    
   },
   "description": ""
 }
