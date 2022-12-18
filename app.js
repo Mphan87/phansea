@@ -1,6 +1,5 @@
 "use strict";
 
-
 const express = require("express");
 const cors = require("cors");
 
@@ -28,7 +27,6 @@ app.use("/saltwaterfish", saltwaterfishRoutes);
 app.use("/coral", coralRoutes);
 app.use("/users", usersRoutes);
 app.use("/auth", authRoutes);
-
 
 
 app.use(function (req, res, next) {

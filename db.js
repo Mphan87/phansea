@@ -7,7 +7,6 @@ let db;
 
 if (process.env.NODE_ENV === "production") {
 
-// if (process.env.DATABASE_URL === "production") {
   db = new Client({
     connectionString: getDatabaseUri(),
     ssl: {
