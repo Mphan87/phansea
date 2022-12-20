@@ -1,6 +1,6 @@
 "use strict";
 
-/** Routes for jobs. */
+
 
 const jsonschema = require("jsonschema");
 

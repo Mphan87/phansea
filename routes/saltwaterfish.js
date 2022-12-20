@@ -1,7 +1,5 @@
 "use strict";
 
-/** Routes for jobs. */
-
 const jsonschema = require("jsonschema");
 
 const express = require("express");
@@ -15,15 +13,12 @@ const Fish = require("../models/saltwaterfish");
 const router = express.Router({ mergeParams: true });
 const createswfish = require("../schemas/createswfish.json");
 
-
-
 router.get("/", async function (req, res, next) {
   const q = req.query;
   const fishes = await Fish.findAll(q);
   return res.json({ fishes });
 
 });
-
 
 router.post("/" , async function (req, res, next) {
 
@@ -49,22 +44,6 @@ router.post("/" , async function (req, res, next) {
     return next(err);
   }
 });
-
-
-// router.post("/", async function (req, res, next) {
-//   try {
-//     const validator = jsonschema.validate(req.body, createswfish);
-//     if (!validator.valid) {
-//       const errs = validator.errors.map(e => e.stack);
-//       throw new BadRequestError(errs);
-//     }
-
-//     const fishcreate = await Fish.create(req.body);
-//     return res.status(201).json({fishcreate});
-//   } catch (err) {
-//     return next(err);
-//   }
-// });
 
 
 router.get("/:handle", async function (req, res, next) {
