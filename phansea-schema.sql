@@ -31,7 +31,6 @@ CREATE TABLE freshwaterfish (
   type TEXT
 );
 
-
 CREATE TABLE coral (
   handle TEXT PRIMARY KEY,
   name TEXT,

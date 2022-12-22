@@ -3,16 +3,13 @@
 
 
 const jsonschema = require("jsonschema");
-
 const express = require("express");
 const { BadRequestError } = require("../expressError");
 const { ensureAdmin } = require("../middleware/auth");
 const { ensureLoggedIn } = require("../middleware/auth");
 const Fish = require("../models/freshwaterfish");
 const createfwfish = require("../schemas/createfwfish.json");
-
 const router = express.Router({ mergeParams: true });
-
 
 router.get("/", async function (req, res, next) {
   const q = req.query;
@@ -44,7 +41,6 @@ router.post("/" , async function (req, res, next) {
   }
 });
 
-
 router.get("/:handle", async function (req, res, next) {
   try {
     const fish = await Fish.get(req.params.handle);
@@ -62,7 +58,6 @@ router.get("/type/:type", async function (req, res, next) {
     return next(err);
   }
 });
-
 
 router.delete("/:handle", async function (req, res, next) {
   try {

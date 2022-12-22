@@ -6,7 +6,6 @@ const {
   BadRequestError,
 } = require("../expressError");
 
-
 class Saltwaterfish {
 
   static async getAll() {
