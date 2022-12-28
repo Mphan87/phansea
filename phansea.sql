@@ -1,7 +1,7 @@
 \echo 'Delete and recreate phansea db?'
 \prompt 'Return for yes or control-C to cancel > ' foo
 
--- DROP DATABASE phansea;
+DROP DATABASE phansea;
 CREATE DATABASE phansea;
 \connect phansea
 
